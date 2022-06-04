@@ -1,0 +1,99 @@
+.HeadIcon {
+  display: flex;
+  width: 375px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.IconStyle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.HeadTextBlock {
+  width: 375px;
+  display: flex;
+  overflow-x: hidden;
+}
+.HeadTextBlock:hover {
+  overflow-x: auto;
+}
+.HeadText {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+}
+.MainBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.classicBox {
+  background: white;
+  border-radius: 20px;
+  width: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.classicBoxLeft {
+  font-size: 25px;
+  font-weight: bold;
+  width: 60%;
+  color: #ffec99;
+}
+.classicBoxRight {
+  height: 150px;
+  object-fit: fill;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.classicApperance {
+  font-size: 14px;
+  color: #ced4da;
+}
+.AiOutlineArrowRight {
+  cursor: pointer;
+  margin-top: 6px;
+  color: black;
+}
+.productWrappingBox {
+  width: 375px;
+  display: flex;
+  overflow-x: hidden;
+}
+.productWrappingBox:hover {
+  overflow-x: scroll;
+}
+.productBox {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  text-overflow: scroll;
+
+  padding: 15px;
+  cursor: pointer;
+}
+.MainTextBlock {
+  width: 375px;
+}
+.productPictureStyle {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.MainSellOrPicks {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+}
