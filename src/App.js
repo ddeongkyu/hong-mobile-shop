@@ -2,7 +2,7 @@ import "./App.css";
 import MainPage from "./components/Main/MainPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BestSellersPage from "./components/BestSellersViewAll/BestSellersPage";
-import HandPicksViewAll from "./components/HandPicksViewAll.js/HandPicksViewAll";
+import HandPicksViewAll from "./components/HandPicksViewAll/HandPicksViewAll";
 function App() {
   return (
     <BrowserRouter>
