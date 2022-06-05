@@ -15,9 +15,9 @@
   display: flex;
   overflow-x: hidden;
 }
-.HeadTextBlock:hover {
+/* .HeadTextBlock:hover {
   overflow-x: auto;
-}
+} */
 .HeadText {
   font-size: 30px;
   font-weight: bold;
