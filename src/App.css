@@ -13,7 +13,7 @@
 .HeadTextBlock {
   width: 375px;
   display: flex;
-  overflow-x: hidden;
+  overflow: auto;
 }
 /* .HeadTextBlock:hover {
   overflow-x: auto;
