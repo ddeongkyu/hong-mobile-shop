@@ -1,15 +1,17 @@
 import "./App.css";
-import HeadIcon from "./components/HeadIcon";
-import HeadText from "./components/HeadText";
-import Main from "./components/Main";
-
+import MainPage from "./components/Main/MainPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BestSellersPage from "./components/BestSellersViewAll/BestSellersPage";
+import HandPicksViewAll from "./components/HandPicksViewAll.js/HandPicksViewAll";
 function App() {
   return (
-    <>
-      <HeadIcon />
-      <HeadText />
-      <Main />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/BestSellers" element={<BestSellersPage />} />
+        <Route path="/Hand-picks" element={<HandPicksViewAll />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

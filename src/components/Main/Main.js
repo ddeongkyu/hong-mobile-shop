@@ -1,6 +1,14 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 function Main() {
+  let navigate = useNavigate();
+  const onGoBestSellersViewAll = () => {
+    navigate("/BestSellers");
+  };
+  const onGoHandPicksViewAll = () => {
+    navigate("/Hand-picks");
+  };
   return (
     <div>
       <div className="MainBlock">
@@ -26,6 +34,9 @@ function Main() {
       </div>
       <div className="MainTextBlock">
         <div className="MainSellOrPicks">Best Sellers</div>
+        <div className="MainViewAllText" onClick={onGoBestSellersViewAll}>
+          View All
+        </div>
       </div>
       <div className="productWrappingBox">
         <span className="productBox">
@@ -60,35 +71,39 @@ function Main() {
 
       <div className="MainTextBlock">
         <div className="MainSellOrPicks">Hand-picks</div>
-        <div className="productWrappingBox">
-          <div className="productBox">
-            <img
-              className="productPictureStyle"
-              src={"/img/pinkChair.jpg"}
-              alt="카떼라떼"
-            />
-          </div>
-          <div className="productBox">
-            <img
-              className="productPictureStyle"
-              src={"/img/whiteChair.jpg"}
-              alt="카떼라떼"
-            />
-          </div>
-          <div className="productBox">
-            <img
-              className="productPictureStyle"
-              src={"/img/royalStyleChair.jpg"}
-              alt="카떼라떼"
-            />
-          </div>
-          <div className="productBox">
-            <img
-              className="productPictureStyle"
-              src={"/img/brownChair.jpg"}
-              alt="카떼라떼"
-            />
-          </div>
+        <div className="MainViewAllText" onClick={onGoHandPicksViewAll}>
+          View All
+        </div>
+      </div>
+
+      <div className="productWrappingBox">
+        <div className="productBox">
+          <img
+            className="productPictureStyle"
+            src={"/img/pinkChair.jpg"}
+            alt="카떼라떼"
+          />
+        </div>
+        <div className="productBox">
+          <img
+            className="productPictureStyle"
+            src={"/img/whiteChair.jpg"}
+            alt="카떼라떼"
+          />
+        </div>
+        <div className="productBox">
+          <img
+            className="productPictureStyle"
+            src={"/img/royalStyleChair.jpg"}
+            alt="카떼라떼"
+          />
+        </div>
+        <div className="productBox">
+          <img
+            className="productPictureStyle"
+            src={"/img/brownChair.jpg"}
+            alt="카떼라떼"
+          />
         </div>
       </div>
     </div>
