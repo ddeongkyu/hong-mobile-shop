@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         box-sizing: border-box;
-        width: 375px;
+        max-width: 1200px;
         background: #e9ecef;
     }
 `;

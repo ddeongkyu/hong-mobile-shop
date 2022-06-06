@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import product from "../../Product";
 function Main() {
   let navigate = useNavigate();
   const onGoBestSellersViewAll = () => {
@@ -9,6 +10,9 @@ function Main() {
   const onGoHandPicksViewAll = () => {
     navigate("/Hand-picks");
   };
+  console.log(product);
+  const bestSellers = product.filter((item) => item.id <= 5);
+  const handPicks = product.filter((item) => item.id > 5);
   return (
     <div>
       <div className="MainBlock">
@@ -39,34 +43,11 @@ function Main() {
         </div>
       </div>
       <div className="productWrappingBox">
-        <span className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/blackChair.jpg"}
-            alt="카떼라떼"
-          />
-        </span>
-        <span className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/fabricChair.jpg"}
-            alt="카떼라떼"
-          />
-        </span>
-        <span className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/greyAndWoodChair.jpg"}
-            alt="카떼라떼"
-          />
-        </span>
-        <span className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/whiteChairWithPink풍선.jpg"}
-            alt="카떼라떼"
-          />
-        </span>
+        {bestSellers.map((item) => (
+          <div className="productBox">
+            <img className="productPictureStyle" src={item.src} alt="alt" />
+          </div>
+        ))}{" "}
       </div>
 
       <div className="MainTextBlock">
@@ -75,8 +56,15 @@ function Main() {
           View All
         </div>
       </div>
-
       <div className="productWrappingBox">
+        {handPicks.map((item) => (
+          <div className="productBox">
+            <img className="productPictureStyle" src={item.src} alt="alt" />
+          </div>
+        ))}{" "}
+      </div>
+
+      {/* <div className="productWrappingBox">
         <div className="productBox">
           <img
             className="productPictureStyle"
@@ -105,7 +93,7 @@ function Main() {
             alt="카떼라떼"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

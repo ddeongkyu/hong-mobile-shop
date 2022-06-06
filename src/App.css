@@ -1,7 +1,8 @@
 .HeadIcon {
   display: flex;
-  width: 375px;
+  min-width: 375px;
   justify-content: flex-end;
+  margin-right: 30px;
   margin-top: 10px;
 }
 .IconStyle {
@@ -11,7 +12,7 @@
   margin-left: 10px;
 }
 .HeadTextBlock {
-  width: 375px;
+  min-width: 375px;
   display: flex;
   overflow: auto;
 }
@@ -32,6 +33,7 @@
   border-radius: 20px;
   width: 93%;
   display: flex;
+  min-width: 375px;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -58,11 +60,10 @@
   color: black;
 }
 .productWrappingBox {
-  width: 375px;
+  min-width: 375px;
   display: flex;
   overflow-x: auto;
 }
-
 .productBox {
   width: 100%;
   height: 90px;
@@ -74,12 +75,11 @@
   justify-content: center;
   margin-left: 15px;
   text-overflow: auto;
-
   padding: 15px;
   cursor: pointer;
 }
 .MainTextBlock {
-  width: 375px;
+  min-width: 375px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,7 +144,8 @@
   height: 50%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   position: absolute;
   top: 0px;
 }
@@ -163,16 +164,14 @@
 }
 .BestPriceBox {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  left: 20px;
+  /* left: 20px; */
 }
 .BestBoxBox {
   display: flex;
-  position: absolute;
-  right: -70px;
+  /* position: absolute; */
 }
 .BestPriceStyle {
   font-weight: bold;
