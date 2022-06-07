@@ -1,7 +1,8 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import product from "../../Product";
+import { Link } from "react-router-dom";
+import data from "../../db/data.json";
 function Main() {
   let navigate = useNavigate();
   const onGoBestSellersViewAll = () => {
@@ -10,9 +11,6 @@ function Main() {
   const onGoHandPicksViewAll = () => {
     navigate("/Hand-picks");
   };
-  console.log(product);
-  const bestSellers = product.filter((item) => item.id <= 5);
-  const handPicks = product.filter((item) => item.id > 5);
   return (
     <div>
       <div className="MainBlock">
@@ -43,11 +41,15 @@ function Main() {
         </div>
       </div>
       <div className="productWrappingBox">
-        {bestSellers.map((item) => (
-          <div className="productBox">
-            <img className="productPictureStyle" src={item.src} alt="alt" />
-          </div>
-        ))}{" "}
+        {data.data.map((id) =>
+          id.id <= 5 ? (
+            <Link to={`/products/${id.id}`}>
+              <div className="productBox">
+                <img className="productPictureStyle" alt="alt" src={id.src} />
+              </div>
+            </Link>
+          ) : null
+        )}
       </div>
 
       <div className="MainTextBlock">
@@ -57,43 +59,16 @@ function Main() {
         </div>
       </div>
       <div className="productWrappingBox">
-        {handPicks.map((item) => (
-          <div className="productBox">
-            <img className="productPictureStyle" src={item.src} alt="alt" />
-          </div>
-        ))}{" "}
+        {data.data.map((id) =>
+          id.id > 5 ? (
+            <Link to={`/products/${id.id}`}>
+              <div className="productBox">
+                <img className="productPictureStyle" alt="alt" src={id.src} />
+              </div>
+            </Link>
+          ) : null
+        )}
       </div>
-
-      {/* <div className="productWrappingBox">
-        <div className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/pinkChair.jpg"}
-            alt="카떼라떼"
-          />
-        </div>
-        <div className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/whiteChair.jpg"}
-            alt="카떼라떼"
-          />
-        </div>
-        <div className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/royalStyleChair.jpg"}
-            alt="카떼라떼"
-          />
-        </div>
-        <div className="productBox">
-          <img
-            className="productPictureStyle"
-            src={"/img/brownChair.jpg"}
-            alt="카떼라떼"
-          />
-        </div>
-      </div> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { HiArchive } from "react-icons/hi";
 import product from "../../Product";
+import data from "../../db/data.json";
 function MainProduct() {
   const handPicks = product.filter((item) => item.id > 5);
 
