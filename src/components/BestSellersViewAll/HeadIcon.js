@@ -10,7 +10,9 @@ function HeadIcon() {
   };
   return (
     <div className="HeadIcon">
-      <BiArrowBack className="IconStyle" onClick={onMainGoGo} />
+      <div className="HeadArrowBack">
+        <BiArrowBack className="IconStyle" onClick={onMainGoGo} />
+      </div>
       <AiFillShopping className="IconStyle" />
       <GiHamburgerMenu className="IconStyle" />
     </div>

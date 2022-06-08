@@ -4,6 +4,14 @@
   justify-content: flex-end;
   margin-right: 30px;
   margin-top: 10px;
+  position: relative;
+}
+.HeadArrowBack {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  left: 10px;
 }
 .IconStyle {
   width: 30px;
@@ -21,6 +29,9 @@
   font-weight: bold;
   padding: 15px;
   cursor: pointer;
+}
+.HeadTextNotActivated {
+  color: #ced4da;
 }
 .MainBlock {
   display: flex;
@@ -197,12 +208,55 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 0.5px solid #868e96;
+}
+.detailPageBoxWithRed {
+  border: 2px solid #f03e3e;
+  width: 80%;
+  height: auto;
+  display: flex;
+  box-shadow: 2px 2px 2px 1px rgba(172, 25, 25, 0.2);
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detailPageBoxWithPink {
+  border: 2px solid #ffc9c9;
+  width: 80%;
+  height: auto;
+  display: flex;
+  box-shadow: 2px 2px 2px 1px rgba(233, 118, 195, 0.2);
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detailPageBoxWithGreen {
+  border: 2px solid #69db7c;
+  width: 80%;
+  height: auto;
+  display: flex;
+  box-shadow: 2px 2px 2px 1px rgba(141, 235, 117, 0.2);
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .detailPageBoxImg {
   width: 100%;
   object-fit: cover;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .detailHeadBox {
   display: flex;
@@ -215,9 +269,11 @@
 .detailHeadBoxHeart {
   color: black;
 }
-.detailHeadBoxHeart:hover {
-  color: pink;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+.detailHeadBoxHeart:active {
+  color: #ffe3e3;
+}
+.detailHeadBoxHeartClicked {
+  color: #ffa8a8;
 }
 .detailNameAndPrice {
   font-weight: bold;
@@ -243,6 +299,7 @@
   background: #f1f3f5;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  border-radius: 20px;
 }
 .detailShoppingCartStyle {
   width: 30%;
@@ -251,4 +308,44 @@
 .detailAddToCart {
   font-weight: bold;
   margin: 10px;
+}
+.detailCircleBox {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 15px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.detailCircleGreenNotClicked {
+  color: #69db7c;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.detailCircleRedNotClicked {
+  color: #f03e3e;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.detailCirclePinkNotClicked {
+  color: #ffc9c9;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.detailCircleYesClicked {
+  border: 2px solid #ced4da;
+}
+@media screen and (min-width: 512px) {
+  .productBox {
+    width: 10rem;
+  }
 }

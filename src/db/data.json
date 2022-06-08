@@ -14,7 +14,7 @@
       "name": "BROWN CHAIR",
       "price": 700,
       "shortExplanation": "Normal Brown Chair",
-      "longExplanation": "The brown chair is very normal. So people like it more."
+      "longExplanation": "The brown chair is very normal. So people like it more. If you want to be a normal person, don't hesitate to buy."
     },
     {
       "id": 3,
@@ -54,7 +54,7 @@
       "price": 8800,
       "name": "ROYAL CHAIR",
       "shortExplanation": "British royal chair",
-      "longExplanation": "It is the chair of the British royal family. (There is no evidence)"
+      "longExplanation": "It is the chair of the British royal family. (There is no evidence. 질문사절)"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "price": 4000,
       "name": "ELEGANT CHAIR",
       "shortExplanation": "elegant white chair",
-      "longExplanation": "An elegant white chair will make you a queen."
+      "longExplanation": "An elegant white chair will make you special. little bit expensive."
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "price": 800,
       "name": "WHITE CHAIR",
       "shortExplanation": "Very normal white chair",
-      "longExplanation": "Its a white chair you can see everywhere, but there is something special about it."
+      "longExplanation": "Its a white chair you can see everywhere, but there is something special about it. Believe or Not"
     },
     {
       "id": 10,
