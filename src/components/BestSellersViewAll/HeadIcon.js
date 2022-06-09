@@ -8,12 +8,15 @@ function HeadIcon() {
   const onMainGoGo = () => {
     navigate("/");
   };
+  const onGoFavorites = () => {
+    navigate("/Favorites");
+  };
   return (
     <div className="HeadIcon">
       <div className="HeadArrowBack">
         <BiArrowBack className="IconStyle" onClick={onMainGoGo} />
       </div>
-      <AiFillShopping className="IconStyle" />
+      <AiFillShopping className="IconStyle" onClick={onGoFavorites} />
       <GiHamburgerMenu className="IconStyle" />
     </div>
   );

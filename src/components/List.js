@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import data from "../db/data.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import { BsFillHeartFill, BsCartPlusFill } from "react-icons/bs";
-import { AiFillDownCircle } from "react-icons/ai";
+import { BsFillHeartFill, BsFillCircleFill } from "react-icons/bs";
+import { FiShoppingCart } from "react-icons/fi";
 
 function ProductDetails() {
   const { id } = useParams();
   let navigate = useNavigate();
-  const onMainGoGo = () => {
-    navigate("/");
-  };
   const [heart, setHeart] = useState(false);
   const [green, setGreen] = useState(false);
   const [red, setRed] = useState(false);
@@ -47,7 +44,7 @@ function ProductDetails() {
   return (
     <>
       <div className="detailHeadBox">
-        <BiArrowBack className="IconStyle" onClick={onMainGoGo} />
+        <BiArrowBack className="IconStyle" onClick={() => navigate(-1)} />
         Product
         <BsFillHeartFill
           className={heart ? "detailHeadBoxHeartClicked" : "detailHeadBoxHeart"}
@@ -76,7 +73,7 @@ function ProductDetails() {
             <div>${data.data[id - 1].price}</div>
           </div>
           <div className="detailCircleBox">
-            <AiFillDownCircle
+            <BsFillCircleFill
               className={
                 green
                   ? "detailCircleGreenNotClicked detailCircleYesClicked"
@@ -85,7 +82,7 @@ function ProductDetails() {
               onClick={onGreenClick}
             />
             &nbsp; &nbsp;
-            <AiFillDownCircle
+            <BsFillCircleFill
               className={
                 pink
                   ? "detailCirclePinkNotClicked detailCircleYesClicked"
@@ -94,7 +91,7 @@ function ProductDetails() {
               onClick={onPinkClick}
             />
             &nbsp; &nbsp;
-            <AiFillDownCircle
+            <BsFillCircleFill
               className={
                 red
                   ? "detailCircleRedNotClicked detailCircleYesClicked"
@@ -107,7 +104,10 @@ function ProductDetails() {
             {data.data[id - 1].longExplanation}
           </div>
           <div className="detailShoppingCart" onClick={onAddToCart}>
-            <BsCartPlusFill className="detailShoppingCartStyle" />
+            <FiShoppingCart
+              className="detailShoppingCartStyle"
+              style={{ color: "white" }}
+            />
           </div>
           <div className="detailAddToCart">+ Add to Cart</div>
         </div>
