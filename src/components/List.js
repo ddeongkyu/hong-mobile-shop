@@ -31,6 +31,20 @@ function ProductDetails() {
     setPink(!pink);
   };
   const onAddToCart = () => {
+    // localStorage.setItem(
+    //   data.data[id - 1].id,
+    //   JSON.stringify(
+    //     data.data[id - 1],
+    //     (data.data[id - 1].Quantity = data.data[id - 1].Quantity + 1)
+    //   )
+    // );
+    localStorage.setItem(data.data[id - 1].id, [
+      JSON.stringify(
+        data.data[id - 1],
+        (data.data[id - 1].Quantity = data.data[id - 1].Quantity + 1)
+      ),
+    ]);
+    console.log(localStorage);
     alert(
       "쇼핑카트에 " +
         data.data[id - 1].name +
@@ -42,77 +56,74 @@ function ProductDetails() {
     );
   };
   return (
-    <>
+    <div className="detailTotalBox">
       <div className="detailHeadBox">
         <BiArrowBack className="IconStyle" onClick={() => navigate(-1)} />
-        Product
+        <span>Product</span>
         <BsFillHeartFill
           className={heart ? "detailHeadBoxHeartClicked" : "detailHeadBoxHeart"}
           onClick={onHeartClick}
         />
       </div>
-      <div className="detailTotalBox">
-        <div
-          className={
-            red
-              ? "detailPageBoxWithRed"
-              : green
-              ? "detailPageBoxWithGreen"
-              : pink
-              ? "detailPageBoxWithPink"
-              : "detailPageBox"
-          }
-        >
-          <img
-            src={data.data[id - 1].src}
-            alt="alt"
-            className="detailPageBoxImg"
-          />
-          <div className="detailNameAndPrice">
-            <div>{data.data[id - 1].name}</div>
-            <div>${data.data[id - 1].price}</div>
-          </div>
-          <div className="detailCircleBox">
-            <BsFillCircleFill
-              className={
-                green
-                  ? "detailCircleGreenNotClicked detailCircleYesClicked"
-                  : "detailCircleGreenNotClicked"
-              }
-              onClick={onGreenClick}
-            />
-            &nbsp; &nbsp;
-            <BsFillCircleFill
-              className={
-                pink
-                  ? "detailCirclePinkNotClicked detailCircleYesClicked"
-                  : "detailCirclePinkNotClicked"
-              }
-              onClick={onPinkClick}
-            />
-            &nbsp; &nbsp;
-            <BsFillCircleFill
-              className={
-                red
-                  ? "detailCircleRedNotClicked detailCircleYesClicked"
-                  : "detailCircleRedNotClicked"
-              }
-              onClick={onRedClick}
-            />
-          </div>
-          <div className="detailLongExplanation">
-            {data.data[id - 1].longExplanation}
-          </div>
-          <div className="detailShoppingCart" onClick={onAddToCart}>
-            <FiShoppingCart
-              className="detailShoppingCartStyle"
-              style={{ color: "white" }}
-            />
-          </div>
-          <div className="detailAddToCart">+ Add to Cart</div>
+      <div
+        className={
+          red
+            ? "detailPageBoxWithRed"
+            : green
+            ? "detailPageBoxWithGreen"
+            : pink
+            ? "detailPageBoxWithPink"
+            : "detailPageBox"
+        }
+      >
+        <img
+          src={data.data[id - 1].src}
+          alt="alt"
+          className="detailPageBoxImg"
+        />
+        <div className="detailNameAndPrice">
+          <div>{data.data[id - 1].name}</div>
+          <div>${data.data[id - 1].price}</div>
         </div>
+        <div className="detailCircleBox">
+          <BsFillCircleFill
+            className={
+              green
+                ? "detailCircleGreenNotClicked detailCircleYesClicked"
+                : "detailCircleGreenNotClicked"
+            }
+            onClick={onGreenClick}
+          />
+          &nbsp; &nbsp;
+          <BsFillCircleFill
+            className={
+              pink
+                ? "detailCirclePinkNotClicked detailCircleYesClicked"
+                : "detailCirclePinkNotClicked"
+            }
+            onClick={onPinkClick}
+          />
+          &nbsp; &nbsp;
+          <BsFillCircleFill
+            className={
+              red
+                ? "detailCircleRedNotClicked detailCircleYesClicked"
+                : "detailCircleRedNotClicked"
+            }
+            onClick={onRedClick}
+          />
+        </div>
+        <div className="detailLongExplanation">
+          {data.data[id - 1].longExplanation}
+        </div>
+        <div className="detailShoppingCartBox">
+          <div className="detailShoppingCart" onClick={onAddToCart}>
+            <FiShoppingCart className="detailShoppingCartStyle" />
+          </div>
+        </div>
+        <div className="detailAddToCart">+ Add to Cart</div>
       </div>
-    </>
+    </div>
   );
 }
 export default ProductDetails;

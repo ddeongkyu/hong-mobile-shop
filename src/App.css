@@ -193,11 +193,6 @@
   cursor: pointer;
 }
 .detailTotalBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.detailPageBox {
   width: 80%;
   height: auto;
   display: flex;
@@ -257,10 +252,9 @@
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
 }
 .detailHeadBox {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,6 +292,13 @@
   line-height: 250%;
   font-family: sans-serif;
 }
+.detailShoppingCartBox {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .detailShoppingCart {
   display: flex;
   align-items: center;
@@ -305,7 +306,7 @@
   width: 19%;
   height: 100px;
   margin-top: 30px;
-  background: #f1f3f5;
+  background: skyblue;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   border-radius: 20px;
@@ -314,12 +315,19 @@
 .detailShoppingCartStyle {
   width: 30%;
   height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 .detailAddToCart {
   font-weight: bold;
   margin: 10px;
   padding: 20px;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .detailCircleBox {
   display: flex;
@@ -360,4 +368,69 @@
   .productBox {
     width: 10rem;
   }
+}
+.FavoritesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: grey;
+  height: 100%;
+  flex-direction: column;
+}
+.FavoritesProductBox {
+  background-color: white;
+  width: 90%;
+  height: 300px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FavoritesHrStyle {
+  width: 100%;
+  border: 0.3px solid #ced4da;
+  box-shadow: 0.2px 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.2);
+}
+.FavoritesProductImgAndPriceBox {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.FavoritesProductImg {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+.FavoritesNameBox {
+  position: absolute;
+  left: 40%;
+}
+.FavoritesPriceBox {
+}
+.FavoritesPriceAndQuantiy {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.FavoritesQuantityAndDeleteBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+.FavoritesPlusMinus {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.FavoritesDelete {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
 }
