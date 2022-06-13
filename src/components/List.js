@@ -31,20 +31,12 @@ function ProductDetails() {
     setPink(!pink);
   };
   const onAddToCart = () => {
-    // localStorage.setItem(
-    //   data.data[id - 1].id,
-    //   JSON.stringify(
-    //     data.data[id - 1],
-    //     (data.data[id - 1].Quantity = data.data[id - 1].Quantity + 1)
-    //   )
-    // );
     localStorage.setItem(data.data[id - 1].id, [
       JSON.stringify(
         data.data[id - 1],
         (data.data[id - 1].Quantity = data.data[id - 1].Quantity + 1)
       ),
     ]);
-    console.log(localStorage);
     alert(
       "쇼핑카트에 " +
         data.data[id - 1].name +
@@ -55,6 +47,7 @@ function ProductDetails() {
         "달러 입니다."
     );
   };
+
   return (
     <div className="detailTotalBox">
       <div className="detailHeadBox">
